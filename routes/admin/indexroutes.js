@@ -5,6 +5,7 @@ const routes = express.Router();
 const ApiController = require('../../controller/admin/apicontroller');
 const multer = require('multer');
 const passport = require('passport');
+const { verifyToken } = require('../../middleware/Auth')
 
 //CATEGORY
 const uploadFile = multer({

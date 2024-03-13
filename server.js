@@ -6,11 +6,11 @@ const passportstretegy = require('./config/passportstretegy');
 const session = require('express-session');
 const cookieParser = require('cookie-parser');
 
-const port = process.env.port || 8000;
+const port = process.env.port || 2105;
 
 const app = express();
 app.set('view engine', 'ejs');
-app.use(express.urlencoded());
+app.use(express.urlencoded({ extended: true }));
 
 app.use(cookieParser());
 
