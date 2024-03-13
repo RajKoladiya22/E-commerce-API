@@ -3,6 +3,12 @@ const SubcategoryModel = require("../../models/admin/subcategorymodel");
 const ProductModel = require("../../models/admin/productmodel");
 const fs = require("fs");
 
+const FirstPage = async(req, res) =>{
+  res.status(200).json({
+    message:'Welcome to my API World'
+  })
+}
+
 //CATEGORY
 const CreatCategory = async (req, res) => {
   try {
@@ -284,6 +290,7 @@ const EditProduct = async (req, res) => {
   };
 
 module.exports = {
+  FirstPage,
   //CATEGORY
   CreatCategory,
   ViewCategory,

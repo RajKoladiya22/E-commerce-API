@@ -38,6 +38,7 @@ const productfile = multer({
 
 
 //CATEGORY
+routes.get('/',uploadFile, ApiController.FirstPage);
 routes.post('/creatcategory',uploadFile, ApiController.CreatCategory);
 routes.get('/categorydata',passport.chekUser, ApiController.ViewCategory);
 routes.get('/editcategory', ApiController.EditCategory);
