@@ -56,6 +56,10 @@ routes.delete('/deletesubcategory', ApiController.DeleteSubcategory);
 routes.post('/addproduct',productfile, ApiController.AddProduct);
 routes.get('/productdata', ApiController.ViewProduct);
 routes.get('/editproduct', ApiController.EditProduct);
+routes.put('/updateproduct',productfile, ApiController.UpdateProduct);
+
+
+routes.get('/index',ApiController.IndexPage);
 
 
 module.exports = routes;
