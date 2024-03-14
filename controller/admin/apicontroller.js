@@ -233,7 +233,7 @@ const AddProduct = async (req, res) => {
       Unit,
       Tags,
       Description,
-      ThumbnailImage: `github.com/RajKoladiya22/E-commerce-API/blob/main/${ThumbnailImage}`,
+      ThumbnailImage: ThumbnailImage,
       Images: Images,
       VideoProvider,
       VideoLink,
