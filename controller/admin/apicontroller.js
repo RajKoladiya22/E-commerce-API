@@ -363,13 +363,28 @@ const IndexPage = async(req, res)=>{
   try{
     let rec = await axios.get('https://raj-api.vercel.app/productdata');
     let pro = rec.data.Product;
-    console.log(pro);
     return res.render('index',{pro});
   }catch(err){
     console.log(err);
     return false;
   }
 }
+const ADD = async(req, res)=>{
+  try{
+    const { categoryId, subcategory } = req.body;
+    let add = await axios.post('https://raj-api.vercel.app/creatsubcategory',{
+      categoryId,
+      subcategory,
+    });
+
+    return res.redirect('back')
+  }catch(err){
+    console.log(err);
+    return false;
+  }
+}
+
+
 
 module.exports = {
   FirstPage,
@@ -392,4 +407,5 @@ module.exports = {
   UpdateProduct,
 
   IndexPage,
+  ADD,
 };

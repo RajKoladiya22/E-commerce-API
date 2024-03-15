@@ -20,10 +20,30 @@
                 <td><%= i  %></td>
                 <td><%= val.PoductName %></td>
                 <td><%= val.Unit %></td>
-                <td><img src="<%= val.ThumbnailImage %>" alt="" width="60"></td>
+                <td><img src="<%= val.ThumbnailImage %>" alt="" ></td>
             </tr>
                 <%}) %>
         </tbody>
     </table>
+
+    <center>
+        <form action="/add" method="post">
+            <table>
+                <tr>
+                    <td>Cat Id</td>
+                    <td><input type="text" name="categoryId"></td>
+                </tr>
+                <tr>
+                    <td>SubCat</td>
+                    <td><input type="text" name="subcategory"></td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="submit" value="submit">
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </center>
 </body>
 </html>
